@@ -37,7 +37,7 @@ public class CreateAccountControl implements ActionListener
 		 if (command == "Cancel")
 		    {
 		    
-		      cardLayout.show(container, "1");
+		      cardLayout.show(container, "2");
 		    }
 		 else if(command=="Submit")
 		{
@@ -77,7 +77,7 @@ public class CreateAccountControl implements ActionListener
 				e1.printStackTrace();
 	    	}
 	    	
-	    	cardLayout.show(container, "1");
+	    	cardLayout.show(container, "2");
 		}
 		 
 	

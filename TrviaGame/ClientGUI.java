@@ -52,7 +52,7 @@ public class ClientGUI extends JFrame
     container.add(view5,"5");
       
     //Show the first 1
-    cl.show(container, "1");
+    cl.show(container, "2");
     
     this.add(container,BorderLayout.CENTER);
         

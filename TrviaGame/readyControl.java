@@ -29,7 +29,7 @@ public class readyControl implements ActionListener
 
     if (command.equals("Log Out"))
     {
-      cl.show(container, "1");
+      cl.show(container, "2");
     }
     
     if(command.contentEquals("Let's Play!"))

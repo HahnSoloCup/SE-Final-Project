@@ -31,10 +31,10 @@ public class LoginControl implements ActionListener
     
     
     String command = ae.getActionCommand();
-
-    if (command.equals("Previous"))
+    
+    if (command.equals("Create Account"))
     {
-      cl.show(container, "1");
+      cl.show(container, "3");
     }
     
     if(command.contentEquals("Submit"))

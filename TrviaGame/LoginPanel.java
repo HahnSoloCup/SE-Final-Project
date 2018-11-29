@@ -31,7 +31,7 @@ public class LoginPanel extends JPanel
   public LoginPanel(CardLayout cl, JPanel container, ChatClient client)
   {
     
-    JPanel inner = new JPanel(new GridLayout(5,2));
+    JPanel inner = new JPanel(new GridLayout(6,2));
     
     JLabel jlabel = new JLabel("Login",JLabel.CENTER);
     
@@ -43,9 +43,11 @@ public class LoginPanel extends JPanel
     LoginControl lc = new LoginControl(cl,container,client);
     submit.addActionListener(lc);
     
-    JButton previous = new JButton("Previous");
-    previous.setPreferredSize(new Dimension(30,30));
-    previous.addActionListener(lc);
+   
+    
+    JButton createAccount = new JButton("Create Account");
+    createAccount.setPreferredSize(new Dimension(30,30));
+    createAccount.addActionListener(lc);
     
     errorMsg = new JLabel("",JLabel.CENTER);
     errorMsg.setForeground(Color.red);
@@ -54,7 +56,7 @@ public class LoginPanel extends JPanel
     inner.add(username);
     inner.add(password);
     inner.add(submit);
-    inner.add(previous);
+    inner.add(createAccount);
 
     this.add(inner);    
   }
