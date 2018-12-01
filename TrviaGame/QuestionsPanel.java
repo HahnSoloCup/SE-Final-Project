@@ -20,13 +20,14 @@ public class QuestionsPanel extends JPanel {
 
 	public QuestionsPanel(CardLayout cl, JPanel container, ChatClient client)
 	{
+		
 		JPanel inner = new JPanel( );
 		inner.setLayout(cl);
 		inner.setBounds(316,15,1,1);
 		inner.setLayout(null);
 		setLayout(null);
-		readyControl rc=new readyControl(cl,container,client);
-		
+		QuestionsControl rc=new QuestionsControl(cl,container,client);
+	
 		JLabel questionLabel = new JLabel("Question");
 		questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		questionLabel.setBounds(140, 8, 180, 20);
@@ -43,37 +44,37 @@ public class QuestionsPanel extends JPanel {
 		questionArea.setColumns(15);
 		questionArea.setWrapStyleWord(true);
 		questionArea.setEditable(false);
-		questionArea.setText("setText Here");
+		questionArea.setText("Question");
 		
-		JRadioButton choice1=new JRadioButton("A)setText Here");
-		JRadioButton choice2=new JRadioButton("B)setText Here ");
-		JRadioButton choice3=new JRadioButton("C)setText Here");
-		JRadioButton choice4=new JRadioButton("D)setText Here");
+		JRadioButton choice1=new JRadioButton("A)Answer");
+		JRadioButton choice2=new JRadioButton("B)Answer");
+		JRadioButton choice3=new JRadioButton("C)Answer");
+	
 		
 		choice1.setBounds(12,60,200,63);
 		choice2.setBounds(12,80,200,63);
 		choice3.setBounds(12,100,200,63);
-		choice4.setBounds(12,120,200,63);
 		ButtonGroup group = new ButtonGroup();
 		group.add(choice1);
 		group.add(choice2);
 		group.add(choice3);
-		group.add(choice4);	
+	
 		setLayout(new GridLayout(0,1));
 		add(choice1);
 		add(choice2);
 		add(choice3);
-		add(choice4);
+		
 	
 		
 		
 		
 		 
 		 
-		JButton addContact = new JButton("Submit answer");
-		addContact.setBounds(12, 200, 150, 35);
-		add(addContact);
-		addContact.setPreferredSize(new Dimension(30,30));
+		JButton submit = new JButton("Submit answer");
+		submit.setBounds(12, 200, 150, 35);
+		add(submit);
+		submit.setPreferredSize(new Dimension(30,30));
+		submit.addActionListener(rc);
 		
 		JButton logout = new JButton("Quit");
 		logout.setBounds(288, 200, 150, 35);

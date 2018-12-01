@@ -11,6 +11,8 @@ public class ClientGUI extends JFrame
   private JPanel view3;
   private JPanel view4;
   private JPanel view5;
+  private JPanel view6;
+  private JPanel view7;
   private ChatClient client;
   private CardLayout cl = new CardLayout();
   private JPanel container = new JPanel(cl);
@@ -42,7 +44,9 @@ public class ClientGUI extends JFrame
     view2 = new LoginPanel(cl,container,client);
     view3 = new CreateAccount(cc);
     view4 = new Ready_Panel(cl,container,client);
-    view5=  new QuestionsPanel(cl,container,client);
+    view5=  new QuestionsPanel(cl,container,client); 
+    view6=  new AnswerPanel(cl,container,client);
+    view7= new EndGamePanel(cl,container,client);
     
     //Add the different views to the CardLayoutContainer
     container.add(view1,"1");
@@ -50,6 +54,9 @@ public class ClientGUI extends JFrame
     container.add(view3,"3");
     container.add(view4,"4");
     container.add(view5,"5");
+    container.add(view6,"6");
+    container.add(view7,"7");
+    
       
     //Show the first 1
     cl.show(container, "2");

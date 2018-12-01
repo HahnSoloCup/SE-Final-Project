@@ -34,35 +34,41 @@ public class Ready_Panel extends JPanel {
 		
 		//deleteContact.setSize(120, 50);
 		
-		//can be used to let the user know there are other users that are not ready yet
-		JLabel statusLabel=new JLabel("");
-		statusLabel.setForeground(Color.BLUE);
+		//can be used to let the user know that all player must be ready before hitting lets play
+		JLabel statusLabel=new JLabel("Player x is not ready!");
+		statusLabel.setForeground(Color.RED);
 		 statusLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		 statusLabel.setBounds(183,55,96,16);	
+		 statusLabel.setBounds(160,170,130,16);	
 		 add(statusLabel);
 		
 	
-		 JLabel readyLabel = new JLabel("Ready Up", JLabel.RIGHT);
+		 JLabel readyLabel = new JLabel("Lobby", JLabel.RIGHT);
 		 readyLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		 readyLabel.setBounds(183,30,96,16);	
 		 add(readyLabel);
 		 
-		 JCheckBox readyButton=new JCheckBox("Ready");
-		 readyButton.setSelected(false);
-		 readyButton.setHorizontalAlignment(SwingConstants.CENTER);
-		 readyButton.setBounds(183,80,96,16);	
-		 add(readyButton);
+		 
+		 JCheckBox p1Button=new JCheckBox("Ready Player 1");
+		 p1Button.setSelected(false);
+		 p1Button.setHorizontalAlignment(SwingConstants.CENTER);
+		 p1Button.setBounds(130,60,130,16);	
+		 add(p1Button);
+		 JCheckBox p2Button=new JCheckBox("Ready Player 2");
+		 p2Button.setSelected(false);
+		 p2Button.setHorizontalAlignment(SwingConstants.CENTER);
+		 p2Button.setBounds(130,90,130,16);	
+		 add(p2Button);
 		 
 		 
 		 
 		JButton playButton = new JButton("Let's Play!");
-		playButton.setBounds(12, 115, 150, 35);
+		playButton.setBounds(12, 130, 150, 35);
 		add(playButton);
 		playButton.setPreferredSize(new Dimension(30,30));
 		playButton.addActionListener(rc);
 		
 		JButton logout = new JButton("Log Out");
-		logout.setBounds(288, 113, 150, 35);
+		logout.setBounds(288, 130, 150, 35);
 		add(logout);
 		logout.setPreferredSize(new Dimension(30,30));
 		logout.addActionListener(rc);

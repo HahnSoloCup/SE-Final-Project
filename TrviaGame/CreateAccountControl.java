@@ -85,6 +85,7 @@ public class CreateAccountControl implements ActionListener
 	public void displayError(String error)
 	  {
 	    CreateAccount createAccountPanel = (CreateAccount)container.getComponent(2);
+	    
 	    createAccountPanel.setError(error);
 	    
 	  }
